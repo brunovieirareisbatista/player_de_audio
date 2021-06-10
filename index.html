@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Play</title>
+    </head>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 500px;
+            box-shadow: 10px 15px rgba(128, 128, 128, 0.541);
+            background-color: blue;
+        }
+        .controle {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background-color: darkseagreen;
+            text-align: center;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-family: Arial, "Helvetica Neue", Helvetica,
+                sans-serif;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>Vida louca, vidaaa, vida de DEV</h1>
+        <div class="container">
+            <img
+                class="image"
+                src="https://pausadrammatica.files.wordpress.com/2020/07/cazuza-jovem-1280x720-1.jpg?w=1280"
+                alt="cazuza"
+            />
+            <audio id="musica" loop>
+                <source
+                    src="assets/musica/Cazuza - O Tempo Não Para.mp3"
+                />
+            </audio>
+            <div id="controle" class="controle">
+                <img
+                    onclick="diminuir_vel()"
+                    id="diminuir"
+                    src="./assets/icones/2x/desacelerar.png"
+                    alt="icone de diminuir velocidade da música"
+                />
+
+                <img
+                    onclick="diminuirVolume()"
+                    id="diminuirVolume()"
+                    src="./assets/icones/2x/diminuir volume.png"
+                    alt="icone para diminuir volume da musica"
+                />
+                <img
+                    onclick="mudo()"
+                    id="mudo"
+                    src="./assets/icones/2x/mudo.png"
+                    alt="icone para deixar musica muda"
+                />
+                <img
+                    onclick="play()"
+                    id="play"
+                    src="./assets/icones/2x/play.png"
+                    alt="icone de play"
+                />
+                <img
+                    onclick="aumentarVolume()"
+                    id="aumentarVolume"
+                    src="./assets/icones/2x/aumentar volume.png"
+                    alt="icone para aumentar volume da musica"
+                />
+                <img
+                    onclick="pause()"
+                    id="pause"
+                    src="./assets/icones/2x/pause.png"
+                    alt="icone de pause"
+                />
+
+                <img
+                    onclick="aumentar_vel()"
+                    id="aumentar_vel"
+                    src="./assets/icones/2x/acelerar.png"
+                    alt="icone para aumentar velelocidade"
+                />
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
